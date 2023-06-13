@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body>
+<div align="center">
+    <br><br>
+    <h2>登入介面</h2><br><br>
+    <span th:text="${data}" style="text-color:red;font-size: 10px"></span>
+
+    <form method="post" action="/dologin">
+        <div>
+            帳戶名稱:<input type="text" name="username" placeholder="請輸入帳戶名稱" required/>
+        </div>
+        <div>
+            帳戶密碼：<input type="password" name="password" placeholder="請輸入帳戶密碼" required/>
+        </div>
+        <button type="submit">登入</button>
+    </form>
+
+    <br>
+    <form method="get" action="/register.html">
+        <input type="submit" value="註冊">
+    </form>
+</div>
+
+</body>
+</html>

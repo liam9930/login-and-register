@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>loginSuccess</title>
+</head>
+<body>
+<div align="center">
+    <p>管理員你好以下為所有會員</p>
+    <table border="1">
+        <tr>
+            <td>會員 id</td>
+            <td>帳號名稱</td>
+            <td>暱稱nickname</td>
+            <td>Email</td>
+            <td>性別 gender</td>
+            <td>會員層級</td>
+            <th>刪除</th>
+        </tr>
+
+        <tr th:each="user: ${userList}">
+            <td><p th:text="${user.id}"></p></td>
+            <td th:text="${user.username}"></td>
+            <td th:text="${user.nickname}"></td>
+            <td th:text="${user.email}"></td>
+            <td th:text="${user.gender}"></td>
+            <td th:text="${user.roleName}"></td>
+            <td >
+                <a th:href="@{/del(userId=${user.id})}"> delete </a>
+
+            </td>
+        </tr>
+
+    </table>
+
+    </br>
+    <form method="get" action="/toLogout">
+        <input type="submit" value="登出">
+    </form>
+
+</div>
+
+
+</body>
+</html>

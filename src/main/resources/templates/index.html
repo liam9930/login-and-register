@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loginSuccess</title>
+</head>
+<body>
+<div align="center">
+    <p>登入成功，以下為你的登錄資訊</p>
+    <table border="1">
+        <tr>
+            <td>會員 id</td>
+            <td>帳號名稱</td>
+            <td>暱稱nickname</td>
+            <td>性別 gender</td>
+            <td>Email</td>
+            <td>會員層級</td>
+        </tr>
+
+        <tr>
+            <td><p th:text="${user_id}"></p></td>
+            <td th:text="${user_name}"></td>
+            <td th:text="${user_nickname}"></td>
+            <td th:text="${user_gender}"></td>
+            <td th:text="${user_email}"></td>
+            <td th:text="${role_name}"></td>
+        </tr>
+    </table>
+
+    </br>
+    <form method="get" action="/toLogout">
+        <input type="submit" value="登出">
+    </form>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.weitzai.mapper.TodoVoMapper">
+    <select id="findAllTodoVo" resultType="TodoVo">
+        SELECT t.id,t.todo,u.username,t.createtime
+        FROM todo t
+        LEFT JOIN user u ON t.user_id=u.id
+    </select>
+
+    <select id="findTodoVoByUsername" resultType="TodoVo">
+        SELECT t.id,t.todo,u.username,t.createtime
+        FROM todo t
+        LEFT JOIN user u ON t.user_id=u.id
+        WHERE username=#{username}
+    </select>
+
+<!--    <insert id="add" parameterType="User">-->
+<!--        INSERT INTO todo(id,username,nickname,password,email,gender,role,createtime)-->
+<!--        VALUES(null,#{username},#{nickname},#{password},#{email},#{gender},2,#{createtime})-->
+<!--    </insert>-->
+
+<!--    <delete id="deletById">-->
+<!--        DELETE FROM user WHERE id=#{id};-->
+<!--    </delete>-->
+
+</mapper>
