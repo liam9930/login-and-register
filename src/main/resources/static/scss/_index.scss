@@ -1,0 +1,19 @@
+.menu-container{
+    background: rgba(64,64,64,0.6);
+    box-shadow: 5px 5px 10px 10px rgba(0,0,0,0.7);
+    padding: 50px;
+    border-radius: 16px;
+}
+.menu-title{
+    letter-spacing: 0.6em;
+}
+
+.menu{
+    
+    .item{
+        padding: 10px 10px;
+        border:1px solid #888;
+        width:14%;
+    }
+   
+}

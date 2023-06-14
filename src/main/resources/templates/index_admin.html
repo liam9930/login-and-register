@@ -1,45 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>loginSuccess</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loginSuccess-admin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/all.css">
+
 </head>
+
 <body>
-<div align="center">
-    <p>管理員你好以下為所有會員</p>
-    <table border="1">
-        <tr>
-            <td>會員 id</td>
-            <td>帳號名稱</td>
-            <td>暱稱nickname</td>
-            <td>Email</td>
-            <td>性別 gender</td>
-            <td>會員層級</td>
-            <th>刪除</th>
-        </tr>
+    <header class="title text-center mt-32 text-3xl">
+        管理員你好，以下為所有會員
+    </header>
+    <section class="menu-container container text-center mt-10 mx-auto my-0">
+        <table class="w-full">
+            <tr class="menu menu-title">
+                <td class="item">會員</br>id</td>
+                <td class="item">帳號名稱 </br>username</td>
+                <td class="item">暱稱</br>nickname</td>
+                <td class="item">電子郵件</br>Email</td>
+                <td class="item">性別</br> gender</td>
+                <td class="item">會員層級</br>role</td>
+                <td class="item">刪除會員</td>
+            </tr>
 
-        <tr th:each="user: ${userList}">
-            <td><p th:text="${user.id}"></p></td>
-            <td th:text="${user.username}"></td>
-            <td th:text="${user.nickname}"></td>
-            <td th:text="${user.email}"></td>
-            <td th:text="${user.gender}"></td>
-            <td th:text="${user.roleName}"></td>
-            <td >
-                <a th:href="@{/del(userId=${user.id})}"> delete </a>
+            <tr class="menu" th:each="user: ${userList}">
+                <td class="item" th:text="${user.id}">2</td>
+                <td class="item"th:text="${user.username}">emma</td>
+                <td class="item" th:text="${user.nickname}">艾瑪</td>
+                <td class="item" th:text="${user.email}">emma@gmail.com</td>
+                <td class="item" th:text="${user.gender}">女</td>
+                <td class="item" th:text="${user.roleName}">一般使用者</td>
+                <td class="item">
+                    <a class="btn btn-danger" th:href="@{/del(userId=${user.id})}"> delete </a>
 
-            </td>
-        </tr>
+                </td>
+            </tr>
+        </table>
+    </section>
 
     </table>
 
-    </br>
-    <form method="get" action="/toLogout">
-        <input type="submit" value="登出">
+    <form class="mt-8" method="get" action="/toLogout">
+        <!-- <input type="submit" value="登出"> -->
+        <button class="btn btn-logout mx-auto" type="submit">登出</button>
     </form>
 
-</div>
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
 </body>
+
 </html>

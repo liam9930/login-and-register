@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>loginSuccess</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/all.css">
 </head>
+
 <body>
-<div align="center">
-    <p>登入成功，以下為你的登錄資訊</p>
-    <table border="1">
-        <tr>
-            <td>會員 id</td>
-            <td>帳號名稱</td>
-            <td>暱稱nickname</td>
-            <td>性別 gender</td>
-            <td>Email</td>
-            <td>會員層級</td>
-        </tr>
+    <header class="title text-center mt-32 text-3xl">
+        登入成功，以下為你的登錄資訊
+    </header>
+    <section class="menu-container container text-center mt-10 mx-auto my-0">
+        <table class="w-full">
+            <tr class="menu menu-title">
+                <td class="item">會員</br>id</td>
+                <td class="item">帳號名稱 </br>username</td>
+                <td class="item">暱稱</br>nickname</td>
+                <td class="item">電子郵件</br>Email</td>
+                <td class="item">性別</br> gender</td>
+                <td class="item">會員層級</br>role</td>
+            </tr>
 
-        <tr>
-            <td><p th:text="${user_id}"></p></td>
-            <td th:text="${user_name}"></td>
-            <td th:text="${user_nickname}"></td>
-            <td th:text="${user_gender}"></td>
-            <td th:text="${user_email}"></td>
-            <td th:text="${role_name}"></td>
-        </tr>
-    </table>
+            <tr class="menu">
+                <td class="item" th:text="${user_id}">1</td>
+                <td class="item" th:text="${user_name}">morty</td>
+                <td class="item" th:text="${user_nickname}">莫提</td>
+                <td class="item" th:text="${user_email}">morty@gmail.com</td>
+                <td class="item" th:text="${user_gender}">男</td>
+                <td class="item" th:text="${role_name}">一般用戶</td>
+            </tr>
+        </table>
 
-    </br>
-    <form method="get" action="/toLogout">
-        <input type="submit" value="登出">
-    </form>
-</div>
 
+        <form class="mt-8" method="get" action="/toLogout">
+            <button class="btn btn-logout mx-auto" type="submit">登出</button>
+        </form>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
 
 </body>
+
 </html>

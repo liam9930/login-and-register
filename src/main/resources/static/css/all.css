@@ -1,0 +1,341 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* rwd ing css,可以當作css Reset其中一個*/
+img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+/*全域border-box*/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "GenYoMin";
+  src: url("../fonts/GenYoMinTW-B-01.ttf") format("truetype");
+}
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  background-image: url(../img/star.jpg);
+  color: aliceblue;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.title {
+  font-family: "GenYoMin";
+  padding: 5px 5px;
+  margin: 0 auto;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.mb-35 {
+  margin-bottom: 35px;
+}
+
+.ml-40 {
+  margin-left: 40px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.m0-auto {
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn {
+  background-color: #6600ea;
+  display: block;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  width: 160px;
+  padding: 14px 30px 14px 30px;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.btn.btn-logout {
+  background-color: #6600ed;
+  letter-spacing: 0.5em;
+}
+.btn.btn-logout:hover {
+  background-color: #44019c;
+  border: 2px solid #fff;
+}
+
+.btn-danger {
+  background-color: #a60027;
+  letter-spacing: 0.3em;
+}
+.btn-danger:hover {
+  background-color: #570014;
+}
+
+.content {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.jc-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.d-n {
+  display: none;
+}
+
+.ai-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fxd-c {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.menu-container {
+  background: rgba(64, 64, 64, 0.6);
+  -webkit-box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.7);
+          box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.7);
+  padding: 50px;
+  border-radius: 16px;
+}
+
+.menu-title {
+  letter-spacing: 0.6em;
+}
+
+.menu .item {
+  padding: 10px 10px;
+  border: 1px solid #888;
+  width: 14%;
+}
+
+.register {
+  max-width: 600px;
+  font-size: 23px;
+}
+.register .item-title {
+  padding: 10px;
+}
+.register .inputContent > input {
+  color: #000;
+}
+.register .input-gender {
+  width: 30px;
+  height: 20px;
+  margin-right: 6px;
+}
+.register .btn.btn-login {
+  background-color: #6600ea;
+}
+
+.login {
+  max-width: 600px;
+  font-size: 23px;
+  position: relative;
+}
+.login .message {
+  color: rgb(255, 101, 101);
+}
+.login .menu {
+  margin-bottom: 30px;
+}
+.login .item-title {
+  padding: 10px;
+}
+.login .inputContent > input {
+  color: #000;
+}
+.login .btn-login {
+  background-color: #6600ea;
+}
+.login .btn-login:hover {
+  background: #3a0084;
+}
+.login .btn-register {
+  background-color: #4dc8d6;
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+}
+.login .btn-register:hover {
+  background: #238e9a;
+}

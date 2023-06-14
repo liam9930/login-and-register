@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'GenYoMin';
+    src: url('../fonts/GenYoMinTW-B-01.ttf') format("truetype")
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+
+
+
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+    background-image: url(../img/star.jpg);
+    color: aliceblue;
+    box-sizing: border-box;
+}
+
+.title{
+    font-family:"GenYoMin";
+    padding: 5px 5px;
+    margin: 0 auto;
+}
+
+
+.mt-50{
+    margin-top: 50px;
+}
+.mb-50{
+    margin-bottom: 50px;
+}
+
+.mb-35{
+    margin-bottom: 35px;
+}
+
+
+.ml-40 {
+    margin-left: 40px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.m0-auto {
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.btn {
+    background-color: #6600ea;
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    width: 160px;
+    padding: 14px 30px 14px 30px;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.btn.btn-logout{
+    background-color: #6600ed;
+    letter-spacing: 0.5em;
+    
+    &:hover{
+        background-color: #44019c;
+        border: 2px solid #fff;
+    }
+}
+.btn-danger{
+    background-color: #a60027;
+    letter-spacing: 0.3em;
+    &:hover{
+        background-color: #570014;
+    }
+}
+
+.content {
+    font-size: 16px;
+    line-height: 1.5;
+
+}
+
+
+.d-flex {
+    display: flex;
+}
+
+.jc-sb {
+    justify-content: space-between;
+}
+
+.d-n {
+    display: none;
+}
+
+.ai-c {
+    align-items: center;
+}
+
+.fxd-c{
+    flex-direction: column;
+}
+
+
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+

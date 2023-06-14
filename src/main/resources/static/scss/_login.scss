@@ -1,0 +1,36 @@
+.login {
+    max-width: 600px;
+    font-size: 23px;
+    position: relative;
+    .message{
+        color: rgb(255, 101, 101);
+
+    }
+
+    .menu{
+        margin-bottom: 30px;
+    }
+
+    .item-title {
+        padding: 10px;
+    }
+
+    .inputContent>input {
+        color: #000;
+    }
+    .btn-login{
+        background-color:#6600ea;
+        &:hover{
+            background: darken(#6600ea,20%);
+        }
+    }
+    .btn-register{
+        background-color:#4dc8d6;
+        position: absolute;
+        right: 50px;
+        bottom: 50px;
+        &:hover{
+            background: darken(#4dc8d6,20%);
+        }
+    }
+}
